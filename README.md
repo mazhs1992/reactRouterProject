@@ -9,3 +9,8 @@
     2. Import {useLoaderData} 
     3. const events =useLoaderData();
 
+### Handle Delay with loader()
+
+    1. Import on Root useNavigation
+    2. Take advantage of navigation.state
+
