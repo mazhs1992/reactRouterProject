@@ -39,10 +39,29 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { path: '/', element: <HomePage /> },
       {
-        path: 'events', element: <EventsRootLayout />, children: [
-          { index: true, element: <EventsPage /> },
+        path: '/',
+        element: <HomePage />
+      },
+      {
+        path: 'events',
+        element: <EventsRootLayout />,
+        children: [
+          {
+            index: true, element: <EventsPage />, loader: async () => {
+
+              const response = await fetch('http://localhost:8080/events');
+
+              if (!response.ok) {
+                // TODO 
+              } else {
+                const resData = await response.json();
+                return resData.events
+              }
+
+
+            }
+          },
           { path: ':eventsId', element: <EventDetailPage /> },
           { path: 'new', element: <NewEventPage /> },
           { path: ':eventsId/edit', element: <EditEventPage /> },
