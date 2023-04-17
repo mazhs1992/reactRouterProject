@@ -7,12 +7,12 @@ import MainNavigation from "../components/MainNavigation"
 function RootLayout() {
     const navigation = useNavigation()
 
-
+    // {navigation.state === 'loading' && <p>Loading...</p>}
     return (
         <>
             <MainNavigation />
             <main >
-               // {navigation.state === 'loading' && <p>Loading...</p>}
+
                 <Outlet />
             </main>
         </>
