@@ -19,3 +19,12 @@
 ### Responce
 
 Use json() from 'react-router-dom' instead of webs Responce.
+
+### EDIT FORM
+
+    1.  Use loader on parent route
+    2.  One children will be the component with path '/'
+    3.  Second children will be the same component with path '/edit'
+    4.  Inside the edit you can use defaultValue from React
+    5.  Use useRouteLoaderData('id') on all the children, id is set on the App.
+
