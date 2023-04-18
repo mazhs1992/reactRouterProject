@@ -16,3 +16,6 @@
     1. Import on Root useNavigation
     2. Take advantage of navigation.state
 
+### Responce
+
+Use json() from 'react-router-dom' instead of webs Responce.
