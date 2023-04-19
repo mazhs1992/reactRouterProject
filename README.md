@@ -69,3 +69,11 @@ Many interactions with the server aren't navigation events. This hook lets you p
 
     tips
         We use it to submit form without redirects
+
+### defer() 
+
+For when waiting data
+
+    1.  Inside loader initialize defer with a key
+    2.  Use Await from react-router-dom
+    3.  Use Suspence to show User a message
