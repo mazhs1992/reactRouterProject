@@ -25,6 +25,9 @@ export async function action({ request, params }) {
         body: JSON.stringify(eventData)
     })
 
+    if (responce.status === 422) {
+        return responce;
+    }
     if (!responce.ok) {
         throw json(
             { message: 'Could not save event.' },

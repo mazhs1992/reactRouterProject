@@ -49,3 +49,9 @@ Use json() from 'react-router-dom' instead of webs Responce.
 ### UI state bassed on submission status
 
     1.  Use useNavigation()
+
+
+### Form Validation
+
+    1.  In Action create a case for 422 status (from the backend).
+    2.  In EventForm import useActionData
