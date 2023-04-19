@@ -37,3 +37,11 @@ Use json() from 'react-router-dom' instead of webs Responce.
     4.  Use fetch to make http request
     5.  Use redirect from  'react-router-dom' to redirect user when status.code:200
 
+    Notes
+        -   You can trigger an action with a React Form by adding action='/path-to-trigger-action'
+
+### Delete Data 
+
+    1.  Create the Action that will trigger deletion
+    2   Add it on the route App.js
+    3.  Use useSubmit({dataToSubmit},{method:'delete' , action:'/path',}) from react-dom
