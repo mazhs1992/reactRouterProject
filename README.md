@@ -45,3 +45,7 @@ Use json() from 'react-router-dom' instead of webs Responce.
     1.  Create the Action that will trigger deletion
     2   Add it on the route App.js
     3.  Use useSubmit({dataToSubmit},{method:'delete' , action:'/path',}) from react-dom
+
+### UI state bassed on submission status
+
+    1.  Use useNavigation()
