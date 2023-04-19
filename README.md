@@ -18,7 +18,7 @@
 
 ### Responce
 
-Use json() from 'react-router-dom' instead of webs Responce.
+Use json() from 'react-router-dom' instead of webs Responce (throw errors).
 
 ### EDIT FORM
 
@@ -55,3 +55,17 @@ Use json() from 'react-router-dom' instead of webs Responce.
 
     1.  In Action create a case for 422 status (from the backend).
     2.  In EventForm import useActionData
+
+### UseFetcher
+
+Many interactions with the server aren't navigation events. This hook lets you plug your UI into your actions and loaders without navigating.
+
+    This is useful when you need to:
+
+    1.  fetch data not associated with UI routes (popovers, dynamic forms, etc.)
+    2.  submit data to actions without navigating (shared components like a newsletter sign ups)
+    3.  handle multiple concurrent submissions in a list (typical "todo app" list where you can click multiple buttons and all should be pending at the same time)
+    4.  infinite scroll containers
+
+    tips
+        We use it to submit form without redirects
