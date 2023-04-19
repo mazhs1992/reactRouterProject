@@ -3,11 +3,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from './pages/HomePage'
 import EventsPage, { loader as eventsLoader } from './pages/EventsPage'
 import EventDetailPage, { loader as eventDetailLoader, action as deleteEventAction } from './pages/EventDetailPage'
-import NewEventPage, { action as newEventAction } from './pages/NewEventPage'
+import NewEventPage from './pages/NewEventPage'
 import EditEventPage from './pages/EditEventPage'
 import RootLayout from "./pages/RootLayout";
 import ErrorPage from "./pages/Error";
 import EventsRootLayout from "./pages/EventsRoot";
+import { action as manipulateEventAction } from './components/EventForm'
 
 // Challenge / Exercise
 
@@ -63,12 +64,15 @@ const router = createBrowserRouter([
               },
               {
                 path: 'edit',
-                element: <EditEventPage />
+                element: <EditEventPage />,
+                action: manipulateEventAction
               },
             ]
           },
           {
-            path: 'new', element: <NewEventPage />, action: newEventAction
+            path: 'new',
+            element: <NewEventPage />,
+            action: manipulateEventAction
           },
         ]
       },
